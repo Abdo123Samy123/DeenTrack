@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DeenTrack | الأصدقاء</title>
+
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="friends.css">
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-brand">
+            <div class="brand-logo">D</div>
+
+            <div>
+                <strong>DeenTrack</strong>
+                <span>طوّر يومك</span>
+            </div>
+        </div>
+<div class="sidebar-user">
+    <div class="sidebar-avatar" id="sidebarAvatar">ع</div>
+
+    <div class="sidebar-user-info">
+        <strong id="sidebarUserName">abdo</strong>
+        <span>
+            🔥 <b id="sidebarStreak">0</b> يوم متتالي
+        </span>
+    </div>
+</div>
+        <nav class="sidebar-nav">
+
+            <a href="index.html" class="nav-item">
+                <span>🏠</span>
+                <div>
+                    <strong>الرئيسية</strong>
+                    <small>لوحة التحكم</small>
+                </div>
+            </a>
+
+            <a href="prayer.html" class="nav-item">
+                <span>🕌</span>
+                <div>
+                    <strong>الصلوات</strong>
+                    <small>متابعة الصلاة</small>
+                </div>
+            </a>
+
+            <a href="dhikr.html" class="nav-item">
+                <span>📿</span>
+                <div>
+                    <strong>الاستغفار</strong>
+                    <small>عداد الذكر</small>
+                </div>
+            </a>
+
+            <a href="study.html" class="nav-item">
+                <span>📚</span>
+                <div>
+                    <strong>المذاكرة</strong>
+                    <small>وقت التركيز</small>
+                </div>
+            </a>
+
+            <a href="schedule.html" class="nav-item">
+                <span>📅</span>
+                <div>
+                    <strong>الجدول</strong>
+                    <small>مواعيد الدروس</small>
+                </div>
+            </a>
+
+            <a href="tasks.html" class="nav-item">
+                <span>✅</span>
+                <div>
+                    <strong>المهام</strong>
+                    <small>الواجبات</small>
+                </div>
+            </a>
+
+            <a href="friends.html" class="nav-item active">
+                <span>👥</span>
+                <div>
+                    <strong>الأصدقاء</strong>
+                    <small>مجتمعك</small>
+                </div>
+            </a>
+
+            <a href="messages.html" class="nav-item">
+                <span>🏆</span>
+                <div>
+                    <strong>التحديات</strong>
+                    <small>نافس أصحابك</small>
+                </div>
+            </a>
+
+            <a href="messages.html" class="nav-item">
+                <span>💬</span>
+                <div>
+                    <strong>المحادثات</strong>
+                    <small>الشات</small>
+                </div>
+            </a>
+
+            <a href="statistics.html" class="nav-item">
+                <span>📊</span>
+                <div>
+                    <strong>الإحصائيات</strong>
+                    <small>حلل تقدمك</small>
+                </div>
+            </a>
+
+            <a href="profile.html" class="nav-item">
+                <span>👤</span>
+                <div>
+                    <strong>الملف الشخصي</strong>
+                    <small>حسابك</small>
+                </div>
+            </a>
+
+            <a href="settings.html" class="nav-item">
+                <span>⚙️</span>
+                <div>
+                    <strong>الإعدادات</strong>
+                    <small>تخصيص الحساب</small>
+                </div>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <span>DeenTrack</span>
+            <small>v1.0 • 2026</small>
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+    <main class="main-content friends-page">
+
+        <!-- HEADER -->
+        <header class="friends-header">
+
+            <div class="friends-header-text">
+
+                <div class="friends-kicker">
+                    <span>👥</span>
+                    مجتمع DeenTrack
+                </div>
+
+                <h1>الأصدقاء</h1>
+
+                <p>
+                    أضف أصحابك، تابع تقدمكم، وخلي المنافسة تحفزكم 🚀
+                </p>
+
+            </div>
+
+            <button
+                type="button"
+                class="add-friend-btn"
+                id="openAddFriendBtn"
+            >
+                <span>＋</span>
+                إضافة صديق
+            </button>
+
+        </header>
+
+
+        <!-- ================= QUICK STATS ================= -->
+        <section class="friends-stats">
+
+            <div class="friend-stat-card">
+
+                <div class="friend-stat-icon">👥</div>
+
+                <div>
+                    <span>أصدقائي</span>
+                    <strong id="friendsCount">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="friend-stat-card">
+
+                <div class="friend-stat-icon">📨</div>
+
+                <div>
+                    <span>طلبات معلقة</span>
+                    <strong id="requestsCount">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="friend-stat-card">
+
+                <div class="friend-stat-icon">🟢</div>
+
+                <div>
+                    <span>متصل الآن</span>
+                    <strong id="onlineCount">0</strong>
+                </div>
+
+            </div>
+
+
+            <div class="friend-stat-card">
+
+                <div class="friend-stat-icon">🏆</div>
+
+                <div>
+                    <span>أعلى نقاط</span>
+                    <strong id="topPoints">0</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SEARCH ================= -->
+        <section class="friends-search-panel">
+
+            <div class="search-title">
+
+                <div class="search-title-icon">
+                    🔎
+                </div>
+
+                <div>
+                    <h2>ابحث عن أصحابك</h2>
+                    <p>
+                        اكتب اسم المستخدم للعثور على حساب
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="friends-search-box">
+
+                <span>⌕</span>
+
+                <input
+                    type="search"
+                    id="friendSearchInput"
+                    placeholder="ابحث باسم المستخدم..."
+                    autocomplete="off"
+                >
+
+                <button
+                    type="button"
+                    id="clearFriendSearch"
+                >
+                    ×
+                </button>
+
+            </div>
+
+            <div
+                class="search-results"
+                id="searchResults"
+            ></div>
+
+        </section>
+
+
+        <!-- ================= REQUESTS ================= -->
+        <section class="friends-section">
+
+            <div class="friends-section-heading">
+
+                <div>
+
+                    <span class="section-heading-icon">
+                        📨
+                    </span>
+
+                    <div>
+                        <h2>طلبات الصداقة</h2>
+                        <p>
+                            الأشخاص اللي بعتولك طلب صداقة
+                        </p>
+                    </div>
+
+                </div>
+
+                <span
+                    class="section-count"
+                    id="requestsBadge"
+                >
+                    0
+                </span>
+
+            </div>
+
+
+            <div
+                class="friend-requests-list"
+                id="friendRequestsList"
+            >
+
+                <div class="friends-empty">
+
+                    <div class="empty-icon">
+                        📨
+                    </div>
+
+                    <strong>
+                        مفيش طلبات جديدة
+                    </strong>
+
+                    <p>
+                        لما حد يبعتلك طلب صداقة هيظهر هنا.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FRIENDS ================= -->
+        <section class="friends-section">
+
+            <div class="friends-section-heading">
+
+                <div>
+
+                    <span class="section-heading-icon">
+                        ✨
+                    </span>
+
+                    <div>
+                        <h2>أصدقائي</h2>
+                        <p>
+                            تابع تقدم أصحابك وشوف ترتيبكم
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="friends-filter">
+
+                    <button
+                        type="button"
+                        class="friend-filter active"
+                        data-friend-filter="all"
+                    >
+                        الكل
+                    </button>
+
+                    <button
+                        type="button"
+                        class="friend-filter"
+                        data-friend-filter="online"
+                    >
+                        متصل
+                    </button>
+
+                    <button
+                        type="button"
+                        class="friend-filter"
+                        data-friend-filter="top"
+                    >
+                        الأعلى نقاط
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="friends-grid"
+                id="friendsGrid"
+            >
+
+                <div class="friends-empty">
+
+                    <div class="empty-icon">
+                        👥
+                    </div>
+
+                    <strong>
+                        لسه مفيش أصدقاء
+                    </strong>
+
+                    <p>
+                        أضف أول صديق ليك وابدأوا التحديات سوا.
+                    </p>
+
+                    <button
+                        type="button"
+                        id="emptyAddFriend"
+                    >
+                        ＋ إضافة أول صديق
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FRIENDS ACTIVITY ================= -->
+        <section class="friends-section">
+
+            <div class="friends-section-heading">
+
+                <div>
+
+                    <span class="section-heading-icon">
+                        ⚡
+                    </span>
+
+                    <div>
+                        <h2>نشاط الأصدقاء</h2>
+                        <p>
+                            آخر التحديثات من أصحابك
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="friends-activity"
+                id="friendsActivity"
+            >
+
+                <div class="activity-empty">
+
+                    <span>⚡</span>
+
+                    <div>
+                        <strong>
+                            النشاط هيظهر هنا
+                        </strong>
+
+                        <p>
+                            لما أصحابك يسجلوا نشاطات جديدة هتشوفها هنا.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ADD FRIEND MODAL ================= -->
+        <div
+            class="friend-modal"
+            id="friendModal"
+        >
+
+            <div
+                class="friend-modal-overlay"
+                id="friendModalOverlay"
+            ></div>
+
+            <div class="friend-modal-box">
+
+                <div class="friend-modal-header">
+
+                    <div>
+
+                        <span>👥</span>
+
+                        <div>
+                            <h2>إضافة صديق</h2>
+                            <p>
+                                ابحث عن صاحبك باسم المستخدم
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="close-friend-modal"
+                        id="closeFriendModal"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="friend-modal-content">
+
+                    <label for="friendUsernameInput">
+                        اسم المستخدم
+                    </label>
+
+                    <div class="modal-search">
+
+                        <span>@</span>
+
+                        <input
+                            type="text"
+                            id="friendUsernameInput"
+                            placeholder="username"
+                            maxlength="30"
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+                    <small class="modal-hint">
+                        اكتب اسم المستخدم بالظبط عشان تلاقي الحساب.
+                    </small>
+
+                    <div
+                        class="modal-search-result"
+                        id="modalSearchResult"
+                    ></div>
+
+                </div>
+
+
+                <div class="friend-modal-actions">
+
+                    <button
+                        type="button"
+                        class="cancel-friend-btn"
+                        id="cancelFriendModal"
+                    >
+                        إلغاء
+                    </button>
+
+                    <button
+                        type="button"
+                        class="send-friend-btn"
+                        id="sendFriendRequest"
+                    >
+                        إرسال الطلب
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= TOAST ================= -->
+        <div
+            class="toast-container"
+            id="toastContainer"
+        ></div>
+
+
+        <footer class="page-footer">
+            <p>
+                © 2026 DeenTrack — طوّر يومك خطوة بخطوة
+            </p>
+        </footer>
+
+    </main>
+
+</div>
+
+
+<script src="friends.js"></script>
+
+</body>
+</html>

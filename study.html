@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>DeenTrack | المذاكرة</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- Study CSS -->
+    <link rel="stylesheet" href="study.css">
+
+</head>
+
+
+<body>
+
+<div class="app-container">
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                <span>☪</span>
+            </div>
+
+            <div>
+                <h2>DeenTrack</h2>
+                <small>طوّر يومك</small>
+            </div>
+
+        </div>
+
+
+        <!-- USER -->
+
+        <div class="user-mini-card">
+
+            <div class="user-avatar">
+                A
+            </div>
+
+            <div class="user-mini-info">
+
+                <strong>Abdo</strong>
+
+                <span>
+                    عضو نشيط
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="sidebar-nav">
+
+            <a
+                href="index.html"
+                class="nav-item"
+            >
+                <span>⌂</span>
+                <label>الرئيسية</label>
+            </a>
+
+
+            <a
+                href="prayer.html"
+                class="nav-item"
+            >
+                <span>🕌</span>
+                <label>الصلوات</label>
+            </a>
+
+
+            <a
+                href="dhikr.html"
+                class="nav-item"
+            >
+                <span>📿</span>
+                <label>الاستغفار</label>
+            </a>
+
+
+            <a
+                href="study.html"
+                class="nav-item active"
+            >
+                <span>📚</span>
+                <label>المذاكرة</label>
+            </a>
+
+
+            <a
+                href="schedule.html"
+                class="nav-item"
+            >
+                <span>📅</span>
+                <label>الجدول</label>
+            </a>
+
+
+            <a
+                href="tasks.html"
+                class="nav-item"
+            >
+                <span>✓</span>
+                <label>المهام</label>
+            </a>
+
+
+            <a
+                href="friends.html"
+                class="nav-item"
+            >
+                <span>👥</span>
+                <label>الأصدقاء</label>
+            </a>
+
+
+            <a
+                href="challenges.html"
+                class="nav-item"
+            >
+                <span>🏆</span>
+                <label>التحديات</label>
+            </a>
+
+
+            <a
+                href="messages.html"
+                class="nav-item"
+            >
+                <span>💬</span>
+                <label>المحادثات</label>
+            </a>
+
+
+            <a
+                href="statistics.html"
+                class="nav-item"
+            >
+                <span>📊</span>
+                <label>الإحصائيات</label>
+            </a>
+
+
+            <a
+                href="profile.html"
+                class="nav-item"
+            >
+                <span>👤</span>
+                <label>الملف الشخصي</label>
+            </a>
+
+
+            <a
+                href="settings.html"
+                class="nav-item"
+            >
+                <span>⚙</span>
+                <label>الإعدادات</label>
+            </a>
+
+        </nav>
+
+
+        <!-- SIDEBAR FOOTER -->
+
+        <div class="sidebar-footer">
+
+            <span>
+                DeenTrack
+            </span>
+
+            <small>
+                Build your better day
+            </small>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="main-content">
+
+
+        <!-- HEADER -->
+
+        <header class="top-header">
+
+            <div class="header-title">
+
+                <span class="page-icon">
+                    📚
+                </span>
+
+                <div>
+
+                    <h1>
+                        المذاكرة
+                    </h1>
+
+                    <p>
+                        ركّز، ذاكر، وطوّر مستواك كل يوم
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="index.html"
+                class="back-home"
+            >
+                الرئيسية
+            </a>
+
+        </header>
+
+
+
+        <!-- =========================
+             STUDY HERO
+        ========================== -->
+
+        <section class="study-hero">
+
+            <div class="study-hero-content">
+
+                <span class="study-badge">
+                    🎯 Focus Mode
+                </span>
+
+                <h2>
+                    وقت التركيز بدأ
+                </h2>
+
+                <p>
+                    اختار المادة وابدأ جلسة مذاكرة جديدة.
+                </p>
+
+            </div>
+
+
+            <div class="study-hero-icon">
+                📚
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             STUDY TIMER
+        ========================== -->
+
+        <section class="study-timer-card">
+
+            <div class="timer-top">
+
+                <div>
+
+                    <span class="small-label">
+                        جلسة المذاكرة الحالية
+                    </span>
+
+                    <h2 id="currentSubject">
+                        بدون مادة
+                    </h2>
+
+                </div>
+
+
+                <div
+                    class="timer-status"
+                    id="timerStatus"
+                >
+                    جاهز للبدء
+                </div>
+
+            </div>
+
+
+            <!-- TIMER -->
+
+            <div class="timer-display">
+
+                <span id="hours">00</span>
+
+                <b>:</b>
+
+                <span id="minutes">00</span>
+
+                <b>:</b>
+
+                <span id="seconds">00</span>
+
+            </div>
+
+
+            <!-- TIMER CIRCLE -->
+
+            <div
+                class="timer-circle"
+                id="timerCircle"
+            >
+
+                <div class="timer-circle-inner">
+
+                    <span>
+                        FOCUS
+                    </span>
+
+                    <strong id="timerPercent">
+                        0%
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- SUBJECT -->
+
+            <div class="subject-box">
+
+                <label for="subjectInput">
+                    المادة
+                </label>
+
+                <input
+                    type="text"
+                    id="subjectInput"
+                    placeholder="مثال: الرياضيات"
+                    maxlength="40"
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <!-- CONTROLS -->
+
+            <div class="timer-controls">
+
+                <button
+                    type="button"
+                    id="startStudy"
+                >
+                    ▶ بدء المذاكرة
+                </button>
+
+
+                <button
+                    type="button"
+                    id="pauseStudy"
+                >
+                    ⏸ إيقاف مؤقت
+                </button>
+
+
+                <button
+                    type="button"
+                    id="resetStudy"
+                >
+                    ↻ إنهاء الجلسة
+                </button>
+
+            </div>
+
+
+            <p class="timer-note">
+
+                الوقت بيتم حسابه من خلال الوقت الحقيقي،
+                عشان لو قفلت الصفحة ورجعت تاني يفضل محسوب صح.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             TODAY STATS
+        ========================== -->
+
+        <section class="study-stats-grid">
+
+
+            <div class="study-stat-card">
+
+                <div class="study-stat-icon">
+                    ⏱️
+                </div>
+
+                <div>
+
+                    <span>
+                        مذاكرة اليوم
+                    </span>
+
+                    <strong id="todayStudy">
+                        0 دقيقة
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="study-stat-card">
+
+                <div class="study-stat-icon">
+                    🎯
+                </div>
+
+                <div>
+
+                    <span>
+                        الهدف اليومي
+                    </span>
+
+                    <strong id="dailyGoal">
+                        120 دقيقة
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="study-stat-card">
+
+                <div class="study-stat-icon">
+                    🏆
+                </div>
+
+                <div>
+
+                    <span>
+                        أفضل يوم
+                    </span>
+
+                    <strong id="bestStudyDay">
+                        0 دقيقة
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="study-stat-card">
+
+                <div class="study-stat-icon">
+                    🔥
+                </div>
+
+                <div>
+
+                    <span>
+                        جلسات اليوم
+                    </span>
+
+                    <strong id="todaySessions">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             DAILY GOAL
+        ========================== -->
+
+        <section class="study-goal-card">
+
+            <div class="study-section-heading">
+
+                <div>
+
+                    <span>
+                        🎯
+                    </span>
+
+                    <h2>
+                        هدف المذاكرة اليومي
+                    </h2>
+
+                </div>
+
+                <strong id="goalPercentage">
+                    0%
+                </strong>
+
+            </div>
+
+
+            <div class="study-progress">
+
+                <div
+                    class="study-progress-fill"
+                    id="studyProgressFill"
+                ></div>
+
+            </div>
+
+
+            <div class="study-goal-footer">
+
+                <span id="goalMinutes">
+                    0 / 120 دقيقة
+                </span>
+
+                <span id="goalMessage">
+                    ابدأ أول جلسة 💚
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SUBJECT QUICK SELECT
+        ========================== -->
+
+        <section class="subjects-section">
+
+            <div class="study-section-heading">
+
+                <div>
+
+                    <span>
+                        📖
+                    </span>
+
+                    <h2>
+                        المواد
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div class="subject-grid">
+
+
+                <button
+                    type="button"
+                    class="subject-card"
+                    data-subject="الرياضيات"
+                >
+
+                    <span>
+                        📐
+                    </span>
+
+                    <strong>
+                        الرياضيات
+                    </strong>
+
+                    <small>
+                        Math
+                    </small>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="subject-card"
+                    data-subject="اللغة العربية"
+                >
+
+                    <span>
+                        📝
+                    </span>
+
+                    <strong>
+                        اللغة العربية
+                    </strong>
+
+                    <small>
+                        Arabic
+                    </small>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="subject-card"
+                    data-subject="اللغة الإنجليزية"
+                >
+
+                    <span>
+                        🇬🇧
+                    </span>
+
+                    <strong>
+                        الإنجليزي
+                    </strong>
+
+                    <small>
+                        English
+                    </small>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="subject-card"
+                    data-subject="العلوم"
+                >
+
+                    <span>
+                        🔬
+                    </span>
+
+                    <strong>
+                        العلوم
+                    </strong>
+
+                    <small>
+                        Science
+                    </small>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="subject-card"
+                    data-subject="الدراسات"
+                >
+
+                    <span>
+                        🌍
+                    </span>
+
+                    <strong>
+                        الدراسات
+                    </strong>
+
+                    <small>
+                        Studies
+                    </small>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="subject-card"
+                    data-subject="البرمجة"
+                >
+
+                    <span>
+                        💻
+                    </span>
+
+                    <strong>
+                        البرمجة
+                    </strong>
+
+                    <small>
+                        Coding
+                    </small>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             RECENT SESSIONS
+        ========================== -->
+
+        <section class="sessions-section">
+
+            <div class="study-section-heading">
+
+                <div>
+
+                    <span>
+                        🕘
+                    </span>
+
+                    <h2>
+                        آخر جلسات المذاكرة
+                    </h2>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="clearSessionsBtn"
+                    class="clear-sessions"
+                >
+                    مسح السجل
+                </button>
+
+            </div>
+
+
+            <div
+                class="sessions-list"
+                id="sessionsList"
+            >
+
+                <div class="empty-sessions">
+
+                    <span>
+                        📚
+                    </span>
+
+                    <strong>
+                        مفيش جلسات لسه
+                    </strong>
+
+                    <p>
+                        ابدأ أول جلسة مذاكرة وهتظهر هنا.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             MOTIVATION
+        ========================== -->
+
+        <section class="study-motivation">
+
+            <div class="motivation-symbol">
+                ⚡
+            </div>
+
+            <div>
+
+                <h3 id="studyMotivationTitle">
+                    مستعد تبدأ؟
+                </h3>
+
+                <p id="studyMotivationText">
+                    ركّز في جلسة واحدة دلوقتي،
+                    وبعدها شوف أنت وصلت لفين.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FOOTER -->
+
+        <footer class="page-footer">
+
+            <p>
+                © 2026 DeenTrack — طوّر يومك خطوة بخطوة
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+
+<!-- TOAST -->
+
+<div
+    class="toast-container"
+    id="toastContainer"
+></div>
+
+
+
+<!-- STUDY JS -->
+
+<script src="study.js"></script>
+
+</body>
+
+</html>

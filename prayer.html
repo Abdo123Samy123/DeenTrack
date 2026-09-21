@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>الصلوات | DeenTrack</title>
+
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="prayer.css">
+</head>
+
+<body>
+
+    <div class="page-glow"></div>
+
+    <main class="prayer-page">
+
+        <header class="page-header">
+
+            <div>
+                <span class="page-label">DEENTRACK</span>
+                <h1>متابعة الصلاة</h1>
+                <p>حافظ على صلواتك وسجل تقدمك اليومي.</p>
+            </div>
+
+            <a href="index.html" class="back-btn">
+                ← الرئيسية
+            </a>
+
+        </header>
+
+        <!-- Progress -->
+
+        <section class="prayer-progress-card">
+
+            <div class="progress-info">
+
+                <span>تقدم اليوم</span>
+
+                <strong id="prayerProgressText">
+                    0 / 5
+                </strong>
+
+            </div>
+
+            <div class="progress-bar">
+                <div id="prayerProgressBar"></div>
+            </div>
+
+            <p id="prayerProgressMessage">
+                لسه اليوم في أوله، ابدأ بأول صلاة ❤️
+            </p>
+
+        </section>
+
+
+        <!-- Prayer Cards -->
+
+        <section class="prayer-grid">
+
+            <article class="prayer-card" data-prayer="fajr">
+
+                <div class="prayer-icon">🌅</div>
+
+                <div class="prayer-info">
+                    <h2>الفجر</h2>
+                    <span>صلاة الفجر</span>
+                </div>
+
+                <button class="prayer-check">
+                    <span>✓</span>
+                </button>
+
+            </article>
+
+
+            <article class="prayer-card" data-prayer="dhuhr">
+
+                <div class="prayer-icon">☀️</div>
+
+                <div class="prayer-info">
+                    <h2>الظهر</h2>
+                    <span>صلاة الظهر</span>
+                </div>
+
+                <button class="prayer-check">
+                    <span>✓</span>
+                </button>
+
+            </article>
+
+
+            <article class="prayer-card" data-prayer="asr">
+
+                <div class="prayer-icon">🌤️</div>
+
+                <div class="prayer-info">
+                    <h2>العصر</h2>
+                    <span>صلاة العصر</span>
+                </div>
+
+                <button class="prayer-check">
+                    <span>✓</span>
+                </button>
+
+            </article>
+
+
+            <article class="prayer-card" data-prayer="maghrib">
+
+                <div class="prayer-icon">🌇</div>
+
+                <div class="prayer-info">
+                    <h2>المغرب</h2>
+                    <span>صلاة المغرب</span>
+                </div>
+
+                <button class="prayer-check">
+                    <span>✓</span>
+                </button>
+
+            </article>
+
+
+            <article class="prayer-card" data-prayer="isha">
+
+                <div class="prayer-icon">🌙</div>
+
+                <div class="prayer-info">
+                    <h2>العشاء</h2>
+                    <span>صلاة العشاء</span>
+                </div>
+
+                <button class="prayer-check">
+                    <span>✓</span>
+                </button>
+
+            </article>
+
+        </section>
+
+
+        <!-- Daily Stats -->
+
+        <section class="prayer-bottom">
+
+            <div class="mini-stat">
+                <span>صلوات مكتملة</span>
+                <strong id="completedPrayers">0</strong>
+            </div>
+
+            <div class="mini-stat">
+                <span>المتبقي</span>
+                <strong id="remainingPrayers">5</strong>
+            </div>
+
+            <div class="mini-stat">
+                <span>النقاط</span>
+                <strong id="prayerPoints">0</strong>
+            </div>
+
+        </section>
+
+    </main>
+
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="prayer.js"></script>
+
+</body>
+</html>

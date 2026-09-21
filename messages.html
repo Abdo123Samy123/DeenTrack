@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>DeenTrack | المحادثات</title>
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- Messages Styles -->
+    <link rel="stylesheet" href="messages.css">
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="brand-icon">
+                ☪
+            </div>
+
+            <div class="brand-text">
+                <strong>DeenTrack</strong>
+                <small>طريقك للأفضل</small>
+            </div>
+
+        </div>
+
+
+        <!-- USER -->
+
+        <div class="sidebar-user">
+
+            <div class="sidebar-avatar">
+                ع
+            </div>
+
+            <div class="sidebar-user-info">
+
+                <strong id="sidebarUserName">
+                    abdo
+                </strong>
+
+                <small>
+                    متصل الآن
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="sidebar-nav">
+
+            <a
+                href="index.html"
+                class="nav-item"
+            >
+
+                <span>⌂</span>
+
+                <div>
+                    <strong>الرئيسية</strong>
+                    <small>لوحة التحكم</small>
+                </div>
+
+            </a>
+
+
+            <a
+                href="prayer.html"
+                class="nav-item"
+            >
+
+                <span>🕌</span>
+
+                <div>
+                    <strong>الصلاة</strong>
+                    <small>متابعة الصلوات</small>
+                </div>
+
+            </a>
+
+
+            <a
+                href="dhikr.html"
+                class="nav-item"
+            >
+
+                <span>📿</span>
+
+                <div>
+                    <strong>الاستغفار</strong>
+                    <small>عداد الأذكار</small>
+                </div>
+
+            </a>
+
+
+            <a
+                href="study.html"
+                class="nav-item"
+            >
+
+                <span>📚</span>
+
+                <div>
+                    <strong>المذاكرة</strong>
+                    <small>وقت الدراسة</small>
+                </div>
+
+            </a>
+
+
+            <a
+                href="schedule.html"
+                class="nav-item"
+            >
+
+                <span>📅</span>
+
+                <div>
+                    <strong>الجدول</strong>
+                    <small>الدراسة والدروس</small>
+                </div>
+
+            </a>
+
+
+            <a
+                href="tasks.html"
+                class="nav-item"
+            >
+
+                <span>✓</span>
+
+                <div>
+                    <strong>المهام</strong>
+                    <small>واجباتك اليومية</small>
+                </div>
+
+            </a>
+
+
+            <a
+                href="friends.html"
+                class="nav-item"
+            >
+
+                <span>👥</span>
+
+                <div>
+                    <strong>الأصدقاء</strong>
+                    <small>أصدقاؤك وتحدياتك</small>
+                </div>
+
+            </a>
+
+
+            <a
+                href="challenges.html"
+                class="nav-item"
+            >
+
+                <span>🏆</span>
+
+                <div>
+                    <strong>التحديات</strong>
+                    <small>نافس وتقدم</small>
+                </div>
+
+            </a>
+
+
+            <a
+                href="statistics.html"
+                class="nav-item"
+            >
+
+                <span>📊</span>
+
+                <div>
+                    <strong>الإحصائيات</strong>
+                    <small>حلل تقدمك</small>
+                </div>
+
+            </a>
+
+
+            <!-- ACTIVE -->
+
+            <a
+                href="messages.html"
+                class="nav-item active"
+            >
+
+                <span>💬</span>
+
+                <div>
+                    <strong>المحادثات</strong>
+                    <small>تواصل مع أصدقائك</small>
+                </div>
+
+            </a>
+
+
+            <a
+                href="profile.html"
+                class="nav-item"
+            >
+
+                <span>👤</span>
+
+                <div>
+                    <strong>الملف الشخصي</strong>
+                    <small>معلوماتك</small>
+                </div>
+
+            </a>
+
+
+            <a
+                href="settings.html"
+                class="nav-item"
+            >
+
+                <span>⚙️</span>
+
+                <div>
+                    <strong>الإعدادات</strong>
+                    <small>تحكم في حسابك</small>
+                </div>
+
+            </a>
+
+        </nav>
+
+
+        <!-- SIDEBAR FOOTER -->
+
+        <div class="sidebar-footer">
+
+            <span>
+                DeenTrack
+            </span>
+
+            <small>
+                v1.0
+            </small>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="main-content messages-page">
+
+
+        <!-- HEADER -->
+
+        <header class="messages-header">
+
+            <div>
+
+                <span class="messages-kicker">
+                    DEENTRACK MESSAGES
+                </span>
+
+                <h1>
+                    المحادثات
+                </h1>
+
+                <p>
+                    تواصل مع أصدقائك بطريقة بسيطة وآمنة.
+                </p>
+
+            </div>
+
+
+            <div class="messages-header-actions">
+
+                <button
+                    class="header-action-btn"
+                    id="newChatBtn"
+                    type="button"
+                >
+                    <span>＋</span>
+                    محادثة جديدة
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             CHAT APPLICATION
+             ================================================= -->
+
+        <section class="chat-layout">
+
+
+            <!-- =============================================
+                 CONVERSATIONS LIST
+                 ============================================= -->
+
+            <aside class="conversations-panel">
+
+
+                <div class="conversations-top">
+
+                    <div>
+
+                        <h2>
+                            الرسائل
+                        </h2>
+
+                        <span id="conversationCount">
+                            0 محادثة
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SEARCH -->
+
+                <div class="chat-search">
+
+                    <span>
+                        🔎
+                    </span>
+
+                    <input
+                        type="text"
+                        id="conversationSearch"
+                        placeholder="ابحث عن صديق..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <!-- FILTERS -->
+
+                <div class="conversation-filters">
+
+                    <button
+                        type="button"
+                        class="conversation-filter active"
+                        data-filter="all"
+                    >
+                        الكل
+                    </button>
+
+                    <button
+                        type="button"
+                        class="conversation-filter"
+                        data-filter="unread"
+                    >
+                        غير مقروءة
+                    </button>
+
+                    <button
+                        type="button"
+                        class="conversation-filter"
+                        data-filter="online"
+                    >
+                        متصل
+                    </button>
+
+                </div>
+
+
+                <!-- CONVERSATIONS -->
+
+                <div
+                    class="conversation-list"
+                    id="conversationList"
+                >
+
+                    <!-- JS -->
+
+                </div>
+
+
+                <!-- EMPTY -->
+
+                <div
+                    class="conversation-empty"
+                    id="conversationEmpty"
+                >
+
+                    <div class="empty-icon">
+                        💬
+                    </div>
+
+                    <h3>
+                        مفيش محادثات
+                    </h3>
+
+                    <p>
+                        ابدأ محادثة مع أحد أصدقائك.
+                    </p>
+
+                </div>
+
+            </aside>
+
+
+            <!-- =============================================
+                 CHAT WINDOW
+                 ============================================= -->
+
+            <section
+                class="chat-window"
+                id="chatWindow"
+            >
+
+
+                <!-- EMPTY CHAT -->
+
+                <div
+                    class="chat-welcome"
+                    id="chatWelcome"
+                >
+
+                    <div class="chat-welcome-icon">
+                        💬
+                    </div>
+
+                    <h2>
+                        اختار محادثة
+                    </h2>
+
+                    <p>
+                        اختار صديق من القائمة عشان تبدأ الكلام.
+                    </p>
+
+                    <button
+                        type="button"
+                        id="welcomeNewChatBtn"
+                        class="primary-chat-btn"
+                    >
+                        ＋ بدء محادثة
+                    </button>
+
+                </div>
+
+
+                <!-- ACTIVE CHAT -->
+
+                <div
+                    class="active-chat"
+                    id="activeChat"
+                    hidden
+                >
+
+
+                    <!-- CHAT HEADER -->
+
+                    <header class="active-chat-header">
+
+                        <div class="chat-person">
+
+                            <div
+                                class="chat-avatar"
+                                id="chatAvatar"
+                            >
+                                ع
+                            </div>
+
+                            <div>
+
+                                <strong
+                                    id="chatPersonName"
+                                >
+                                    abdo
+                                </strong>
+
+                                <span
+                                    id="chatPersonStatus"
+                                >
+                                    متصل الآن
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="chat-header-actions">
+
+                            <button
+                                type="button"
+                                class="chat-icon-btn"
+                                id="chatSearchBtn"
+                                title="بحث في المحادثة"
+                            >
+                                🔎
+                            </button>
+
+                            <button
+                                type="button"
+                                class="chat-icon-btn"
+                                id="chatMenuBtn"
+                                title="المزيد"
+                            >
+                                ⋮
+                            </button>
+
+                        </div>
+
+                    </header>
+
+
+                    <!-- MESSAGES -->
+
+                    <div
+                        class="messages-container"
+                        id="messagesContainer"
+                    >
+
+                        <!-- JS -->
+
+                    </div>
+
+
+                    <!-- TYPING -->
+
+                    <div
+                        class="typing-indicator"
+                        id="typingIndicator"
+                        hidden
+                    >
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <small>
+                            يكتب الآن...
+                        </small>
+
+                    </div>
+
+
+                    <!-- MESSAGE INPUT -->
+
+                    <form
+                        class="message-form"
+                        id="messageForm"
+                    >
+
+                        <button
+                            type="button"
+                            class="message-tool-btn"
+                            id="emojiBtn"
+                            title="إيموجي"
+                        >
+                            😊
+                        </button>
+
+
+                        <input
+                            type="text"
+                            id="messageInput"
+                            placeholder="اكتب رسالتك..."
+                            autocomplete="off"
+                            maxlength="1000"
+                        >
+
+
+                        <button
+                            type="submit"
+                            class="send-message-btn"
+                            id="sendMessageBtn"
+                        >
+                            ➤
+                        </button>
+
+                    </form>
+
+
+                    <!-- EMOJI PANEL -->
+
+                    <div
+                        class="emoji-panel"
+                        id="emojiPanel"
+                        hidden
+                    >
+
+                        <button type="button">😊</button>
+                        <button type="button">😂</button>
+                        <button type="button">❤️</button>
+                        <button type="button">👍</button>
+                        <button type="button">🔥</button>
+                        <button type="button">👏</button>
+                        <button type="button">🥰</button>
+                        <button type="button">🤍</button>
+                        <button type="button">✨</button>
+                        <button type="button">💯</button>
+                        <button type="button">😎</button>
+                        <button type="button">🙏</button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- =================================================
+             NEW CHAT MODAL
+             ================================================= -->
+
+        <div
+            class="modal-overlay"
+            id="newChatModal"
+            hidden
+        >
+
+            <div class="chat-modal">
+
+
+                <button
+                    type="button"
+                    class="modal-close"
+                    id="closeNewChat"
+                >
+                    ×
+                </button>
+
+
+                <div class="modal-icon">
+                    💬
+                </div>
+
+
+                <h2>
+                    محادثة جديدة
+                </h2>
+
+                <p>
+                    اختار صديق عشان تبدأ محادثة.
+                </p>
+
+
+                <!-- SEARCH FRIEND -->
+
+                <div class="modal-search">
+
+                    <span>
+                        🔎
+                    </span>
+
+                    <input
+                        type="text"
+                        id="friendSearchInput"
+                        placeholder="ابحث عن صديق..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <!-- FRIENDS -->
+
+                <div
+                    class="modal-friends-list"
+                    id="modalFriendsList"
+                >
+
+                    <!-- JS -->
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="modal-cancel-btn"
+                    id="cancelNewChat"
+                >
+                    إلغاء
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             CHAT MENU
+             ================================================= -->
+
+        <div
+            class="chat-menu"
+            id="chatMenu"
+            hidden
+        >
+
+            <button
+                type="button"
+                id="clearChatBtn"
+            >
+                🗑️ مسح المحادثة
+            </button>
+
+            <button
+                type="button"
+                id="closeChatBtn"
+            >
+                ✕ إغلاق المحادثة
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             TOAST
+             ================================================= -->
+
+        <div
+            class="chat-toast"
+            id="chatToast"
+        >
+            تم
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <footer class="messages-footer">
+
+            <span>
+                DeenTrack
+            </span>
+
+            <span>
+                •
+            </span>
+
+            <span>
+                المحادثات آمنة ومخصصة لأصدقائك
+            </span>
+
+        </footer>
+
+
+    </main>
+
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+     ========================================================= -->
+
+<script src="messages.js"></script>
+<script src="user.js"></script>
+
+</body>
+</html>

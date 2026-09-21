@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="DeenTrack - إعدادات الحساب والتطبيق"
+    >
+
+    <title>DeenTrack | الإعدادات</title>
+
+    <!-- نفس ملفات المشروع الأساسية -->
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="dashboard.css">
+
+    <!-- CSS الخاص بالإعدادات -->
+    <link rel="stylesheet" href="settings.css">
+</head>
+
+<body>
+
+    <div class="app-layout">
+
+        <!-- =========================================
+             SIDEBAR
+        ========================================== -->
+
+        <aside class="sidebar" id="sidebar">
+
+            <div class="sidebar-brand">
+                <div class="brand-icon">D</div>
+
+                <div>
+                    <strong>DeenTrack</strong>
+                    <small>نظّم يومك • طوّر نفسك</small>
+                </div>
+            </div>
+
+
+            <!-- المستخدم -->
+            <div class="sidebar-user">
+
+                <div class="sidebar-user-avatar">
+                    ع
+                </div>
+
+                <div>
+                    <strong>abdo</strong>
+                    <small>عضو نشط</small>
+                </div>
+
+            </div>
+
+
+            <!-- القائمة -->
+            <nav class="sidebar-nav">
+
+                <a href="index.html" class="nav-item">
+
+                    <span>⌂</span>
+
+                    <div>
+                        <strong>الرئيسية</strong>
+                        <small>لوحة التحكم</small>
+                    </div>
+
+                </a>
+
+
+                <a href="prayer.html" class="nav-item">
+
+                    <span>🕌</span>
+
+                    <div>
+                        <strong>الصلاة</strong>
+                        <small>متابعة الصلوات</small>
+                    </div>
+
+                </a>
+
+
+                <a href="dhikr.html" class="nav-item">
+
+                    <span>📿</span>
+
+                    <div>
+                        <strong>الاستغفار</strong>
+                        <small>عداد الذكر</small>
+                    </div>
+
+                </a>
+
+
+                <a href="study.html" class="nav-item">
+
+                    <span>📚</span>
+
+                    <div>
+                        <strong>المذاكرة</strong>
+                        <small>وقت المذاكرة</small>
+                    </div>
+
+                </a>
+
+
+                <a href="schedule.html" class="nav-item">
+
+                    <span>🗓️</span>
+
+                    <div>
+                        <strong>الجدول</strong>
+                        <small>الدروس والمواعيد</small>
+                    </div>
+
+                </a>
+
+
+                <a href="tasks.html" class="nav-item">
+
+                    <span>✓</span>
+
+                    <div>
+                        <strong>المهام</strong>
+                        <small>مهامك اليومية</small>
+                    </div>
+
+                </a>
+
+
+                <a href="friends.html" class="nav-item">
+
+                    <span>👥</span>
+
+                    <div>
+                        <strong>الأصدقاء</strong>
+                        <small>الأصدقاء والطلبات</small>
+                    </div>
+
+                </a>
+
+
+                <a href="challenges.html" class="nav-item">
+
+                    <span>🏆</span>
+
+                    <div>
+                        <strong>التحديات</strong>
+                        <small>نافس وطوّر نفسك</small>
+                    </div>
+
+                </a>
+
+
+                <a href="statistics.html" class="nav-item">
+
+                    <span>📊</span>
+
+                    <div>
+                        <strong>الإحصائيات</strong>
+                        <small>حلّل تقدمك</small>
+                    </div>
+
+                </a>
+
+
+                <!-- المحادثات -->
+                <a href="messages.html" class="nav-item">
+
+                    <span>💬</span>
+
+                    <div>
+                        <strong>المحادثات</strong>
+                        <small>تواصل مع أصدقائك</small>
+                    </div>
+
+                </a>
+
+
+                <!-- الإعدادات -->
+                <a
+                    href="settings.html"
+                    class="nav-item active"
+                >
+
+                    <span>⚙️</span>
+
+                    <div>
+                        <strong>الإعدادات</strong>
+                        <small>تخصيص التطبيق</small>
+                    </div>
+
+                </a>
+
+            </nav>
+
+
+            <!-- Footer Sidebar -->
+            <div class="sidebar-footer">
+
+                <a href="profile.html" class="sidebar-footer-link">
+
+                    <span>👤</span>
+
+                    <div>
+                        <strong>الملف الشخصي</strong>
+                        <small>بياناتك الشخصية</small>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =========================================
+             MAIN
+        ========================================== -->
+
+        <main class="main-content settings-page">
+
+            <!-- Header -->
+            <header class="page-header settings-header">
+
+                <div>
+
+                    <span class="page-kicker">
+                        DeenTrack Settings
+                    </span>
+
+                    <h1>
+                        الإعدادات
+                    </h1>
+
+                    <p>
+                        خصّص تجربتك وتحكم في إعدادات حسابك وتطبيقك.
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="فتح القائمة"
+                >
+                    ☰
+                </button>
+
+            </header>
+
+
+            <!-- =========================================
+                 SETTINGS LAYOUT
+            ========================================== -->
+
+            <section class="settings-layout">
+
+
+                <!-- =====================================
+                     SETTINGS NAV
+                ====================================== -->
+
+                <aside class="settings-menu">
+
+                    <button
+                        type="button"
+                        class="settings-menu-item active"
+                        data-settings-section="account"
+                    >
+                        <span>👤</span>
+
+                        <div>
+                            <strong>الحساب</strong>
+                            <small>بيانات حسابك</small>
+                        </div>
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="settings-menu-item"
+                        data-settings-section="appearance"
+                    >
+                        <span>🎨</span>
+
+                        <div>
+                            <strong>المظهر</strong>
+                            <small>الشكل والألوان</small>
+                        </div>
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="settings-menu-item"
+                        data-settings-section="notifications"
+                    >
+                        <span>🔔</span>
+
+                        <div>
+                            <strong>الإشعارات</strong>
+                            <small>التنبيهات والتذكيرات</small>
+                        </div>
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="settings-menu-item"
+                        data-settings-section="privacy"
+                    >
+                        <span>🔒</span>
+
+                        <div>
+                            <strong>الخصوصية</strong>
+                            <small>البيانات والخصوصية</small>
+                        </div>
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="settings-menu-item"
+                        data-settings-section="data"
+                    >
+                        <span>💾</span>
+
+                        <div>
+                            <strong>البيانات</strong>
+                            <small>نسخ واستعادة البيانات</small>
+                        </div>
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="settings-menu-item"
+                        data-settings-section="about"
+                    >
+                        <span>ℹ️</span>
+
+                        <div>
+                            <strong>عن التطبيق</strong>
+                            <small>معلومات DeenTrack</small>
+                        </div>
+                    </button>
+
+                </aside>
+
+
+                <!-- =====================================
+                     SETTINGS CONTENT
+                ====================================== -->
+
+                <div class="settings-content">
+
+
+                    <!-- =================================
+                         ACCOUNT
+                    ================================== -->
+
+                    <section
+                        class="settings-section active"
+                        id="settings-account"
+                        data-section="account"
+                    >
+
+                        <div class="settings-section-header">
+
+                            <div>
+                                <span class="section-label">
+                                    ACCOUNT
+                                </span>
+
+                                <h2>
+                                    إعدادات الحساب
+                                </h2>
+
+                                <p>
+                                    عدّل المعلومات الأساسية الخاصة بحسابك.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <!-- Profile Preview -->
+
+                        <div class="settings-card profile-preview-card">
+
+                            <div class="settings-profile-avatar">
+                                ع
+                            </div>
+
+                            <div class="settings-profile-info">
+
+                                <strong id="settingsProfileName">
+                                    abdo
+                                </strong>
+
+                                <span id="settingsProfileUsername">
+                                    @abdo
+                                </span>
+
+                                <small>
+                                    عضو في DeenTrack
+                                </small>
+
+                            </div>
+
+                            <a
+                                href="profile.html"
+                                class="settings-secondary-btn"
+                            >
+                                تعديل الملف الشخصي
+                            </a>
+
+                        </div>
+
+
+                        <!-- Account Form -->
+
+                        <div class="settings-card">
+
+                            <div class="card-title-row">
+
+                                <div>
+                                    <h3>
+                                        المعلومات الأساسية
+                                    </h3>
+
+                                    <p>
+                                        المعلومات التي تظهر داخل حسابك.
+                                    </p>
+                                </div>
+
+                            </div>
+
+
+                            <form id="accountSettingsForm">
+
+                                <div class="settings-form-grid">
+
+                                    <div class="form-group">
+
+                                        <label for="settingsName">
+                                            الاسم
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="settingsName"
+                                            placeholder="اكتب اسمك"
+                                            maxlength="40"
+                                        >
+
+                                    </div>
+
+
+                                    <div class="form-group">
+
+                                        <label for="settingsUsername">
+                                            اسم المستخدم
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="settingsUsername"
+                                            placeholder="username"
+                                            maxlength="30"
+                                        >
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="settingsBio">
+                                        نبذة عنك
+                                    </label>
+
+                                    <textarea
+                                        id="settingsBio"
+                                        rows="4"
+                                        maxlength="160"
+                                        placeholder="اكتب نبذة قصيرة عن نفسك..."
+                                    ></textarea>
+
+                                    <small class="input-counter">
+                                        <span id="bioCounter">0</span>/160
+                                    </small>
+
+                                </div>
+
+
+                                <div class="settings-actions">
+
+                                    <button
+                                        type="submit"
+                                        class="settings-primary-btn"
+                                    >
+                                        حفظ التغييرات
+                                    </button>
+
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </section>
+<!-- =================================
+     APPEARANCE
+================================== -->
+
+<section
+    class="settings-section"
+    id="settings-appearance"
+    data-section="appearance"
+>
+
+    <div class="settings-section-header">
+
+        <div>
+            <span class="section-label">
+                APPEARANCE
+            </span>
+
+            <h2>
+                المظهر
+            </h2>
+
+            <p>
+                اختار الشكل اللي يناسبك.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="settings-card">
+
+        <div class="card-title-row">
+
+            <div>
+                <h3>
+                    الوضع
+                </h3>
+
+                <p>
+                    اختر طريقة عرض التطبيق.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="theme-options">
+
+            <button
+                type="button"
+                class="theme-option active"
+                data-theme="dark"
+            >
+
+                <div class="theme-preview dark-preview">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <strong>
+                    الوضع الداكن
+                </strong>
+
+                <small>
+                    مريح للعين
+                </small>
+
+            </button>
+
+
+            <button
+                type="button"
+                class="theme-option"
+                data-theme="light"
+            >
+
+                <div class="theme-preview light-preview">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <strong>
+                    الوضع الفاتح
+                </strong>
+
+                <small>
+                    مظهر مشرق
+                </small>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="settings-card">
+
+        <div class="card-title-row">
+
+            <div>
+                <h3>
+                    المؤثرات
+                </h3>
+
+                <p>
+                    تحكم في المؤثرات والحركة داخل التطبيق.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="setting-row">
+
+            <div class="setting-row-info">
+
+                <strong>
+                    المؤثرات الحركية
+                </strong>
+
+                <small>
+                    تشغيل الحركات والانتقالات البصرية.
+                </small>
+
+            </div>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="animationsToggle"
+                    checked
+                >
+
+                <span class="switch-slider"></span>
+
+            </label>
+
+        </div>
+
+
+        <div class="setting-row">
+
+            <div class="setting-row-info">
+
+                <strong>
+                    المؤثرات البصرية
+                </strong>
+
+                <small>
+                    توهج وتأثيرات الواجهة.
+                </small>
+
+            </div>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="effectsToggle"
+                    checked
+                >
+
+                <span class="switch-slider"></span>
+
+            </label>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     NOTIFICATIONS
+================================== -->
+
+<section
+    class="settings-section"
+    id="settings-notifications"
+    data-section="notifications"
+>
+
+    <div class="settings-section-header">
+
+        <div>
+            <span class="section-label">
+                NOTIFICATIONS
+            </span>
+
+            <h2>
+                الإشعارات والتذكيرات
+            </h2>
+
+            <p>
+                اختار التنبيهات اللي تحب تظهرلك.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="settings-card">
+
+        <div class="setting-row">
+
+            <div class="setting-row-info">
+
+                <strong>
+                    تذكير الصلاة
+                </strong>
+
+                <small>
+                    تذكيرك بمتابعة الصلوات.
+                </small>
+
+            </div>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="prayerNotifications"
+                    checked
+                >
+
+                <span class="switch-slider"></span>
+
+            </label>
+
+        </div>
+
+
+        <div class="setting-row">
+
+            <div class="setting-row-info">
+
+                <strong>
+                    تذكير المذاكرة
+                </strong>
+
+                <small>
+                    تنبيه عند موعد المذاكرة.
+                </small>
+
+            </div>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="studyNotifications"
+                    checked
+                >
+
+                <span class="switch-slider"></span>
+
+            </label>
+
+        </div>
+
+
+        <div class="setting-row">
+
+            <div class="setting-row-info">
+
+                <strong>
+                    تذكير المهام
+                </strong>
+
+                <small>
+                    تنبيه بالمهام غير المكتملة.
+                </small>
+
+            </div>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="taskNotifications"
+                    checked
+                >
+
+                <span class="switch-slider"></span>
+
+            </label>
+
+        </div>
+
+
+        <div class="setting-row">
+
+            <div class="setting-row-info">
+
+                <strong>
+                    تذكير الاستغفار
+                </strong>
+
+                <small>
+                    تذكير بهدف الاستغفار اليومي.
+                </small>
+
+            </div>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="dhikrNotifications"
+                    checked
+                >
+
+                <span class="switch-slider"></span>
+
+            </label>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     PRIVACY
+================================== -->
+
+<section
+    class="settings-section"
+    id="settings-privacy"
+    data-section="privacy"
+>
+
+    <div class="settings-section-header">
+
+        <div>
+            <span class="section-label">
+                PRIVACY
+            </span>
+
+            <h2>
+                الخصوصية
+            </h2>
+
+            <p>
+                تحكم في المعلومات التي يمكن للآخرين رؤيتها.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="settings-card">
+
+        <div class="setting-row">
+
+            <div class="setting-row-info">
+
+                <strong>
+                    ظهور الملف الشخصي
+                </strong>
+
+                <small>
+                    السماح للأصدقاء برؤية بيانات ملفك.
+                </small>
+
+            </div>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="profileVisibility"
+                    checked
+                >
+
+                <span class="switch-slider"></span>
+
+            </label>
+
+        </div>
+
+
+        <div class="setting-row">
+
+            <div class="setting-row-info">
+
+                <strong>
+                    إظهار الإحصائيات
+                </strong>
+
+                <small>
+                    السماح للأصدقاء برؤية تقدمك وإحصائياتك.
+                </small>
+
+            </div>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="statsVisibility"
+                    checked
+                >
+
+                <span class="switch-slider"></span>
+
+            </label>
+
+        </div>
+
+
+        <div class="setting-row">
+
+            <div class="setting-row-info">
+
+                <strong>
+                    الظهور كمتصل
+                </strong>
+
+                <small>
+                    السماح للأصدقاء بمعرفة أنك متصل.
+                </small>
+
+            </div>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="onlineVisibility"
+                    checked
+                >
+
+                <span class="switch-slider"></span>
+
+            </label>
+
+        </div>
+
+    </div>
+
+
+    <div class="privacy-note">
+
+        <span>🔐</span>
+
+        <p>
+            بياناتك الشخصية وكلمات المرور يجب ألا يتم
+            تخزينها أو عرضها بشكل غير آمن.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     DATA
+================================== -->
+
+<section
+    class="settings-section"
+    id="settings-data"
+    data-section="data"
+>
+
+    <div class="settings-section-header">
+
+        <div>
+            <span class="section-label">
+                DATA
+            </span>
+
+            <h2>
+                البيانات
+            </h2>
+
+            <p>
+                احتفظ بنسخة من بيانات DeenTrack الخاصة بك.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="settings-card">
+
+        <div class="data-action">
+
+            <div class="data-action-icon">
+                📦
+            </div>
+
+            <div class="data-action-info">
+
+                <strong>
+                    تصدير البيانات
+                </strong>
+
+                <small>
+                    تحميل نسخة JSON من بياناتك الحالية.
+                </small>
+
+            </div>
+
+            <button
+                type="button"
+                class="settings-secondary-btn"
+                id="exportDataBtn"
+            >
+                تصدير
+            </button>
+
+        </div>
+
+
+        <div class="data-action">
+
+            <div class="data-action-icon">
+                📥
+            </div>
+
+            <div class="data-action-info">
+
+                <strong>
+                    استيراد البيانات
+                </strong>
+
+                <small>
+                    استعادة بياناتك من ملف JSON محفوظ.
+                </small>
+
+            </div>
+
+            <button
+                type="button"
+                class="settings-secondary-btn"
+                id="importDataBtn"
+            >
+                استيراد
+            </button>
+
+        </div>
+
+
+        <input
+            type="file"
+            id="importFileInput"
+            accept=".json,application/json"
+            hidden
+        >
+
+    </div>
+
+
+    <div class="settings-card danger-card">
+
+        <div class="data-action">
+
+            <div class="data-action-icon">
+                ⚠️
+            </div>
+
+            <div class="data-action-info">
+
+                <strong>
+                    إعادة ضبط بيانات التطبيق
+                </strong>
+
+                <small>
+                    حذف البيانات المحلية وإرجاع التطبيق للحالة الافتراضية.
+                </small>
+
+            </div>
+
+            <button
+                type="button"
+                class="danger-btn"
+                id="resetDataBtn"
+            >
+                إعادة ضبط
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================
+     ABOUT
+================================== -->
+
+<section
+    class="settings-section"
+    id="settings-about"
+    data-section="about"
+>
+
+    <div class="settings-section-header">
+
+        <div>
+            <span class="section-label">
+                ABOUT
+            </span>
+
+            <h2>
+                عن DeenTrack
+            </h2>
+
+            <p>
+                منصة شخصية لتنظيم يومك ومتابعة تقدمك.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="about-card">
+
+        <div class="about-logo">
+            D
+        </div>
+
+        <h2>
+            DeenTrack
+        </h2>
+
+        <p>
+            نظّم صلاتك، مذاكرتك، مهامك وذكرك
+            في مكان واحد.
+        </p>
+
+        <span class="version">
+            الإصدار 1.0
+        </span>
+
+    </div>
+
+
+    <div class="settings-card about-features">
+
+        <div class="about-feature">
+            <span>🕌</span>
+            <strong>متابعة الصلاة</strong>
+        </div>
+
+        <div class="about-feature">
+            <span>📿</span>
+            <strong>عداد الاستغفار</strong>
+        </div>
+
+        <div class="about-feature">
+            <span>📚</span>
+            <strong>تنظيم المذاكرة</strong>
+        </div>
+
+        <div class="about-feature">
+            <span>🏆</span>
+            <strong>التحديات والنقاط</strong>
+        </div>
+
+        <div class="about-feature">
+            <span>📊</span>
+            <strong>الإحصائيات</strong>
+        </div>
+
+        <div class="about-feature">
+            <span>👥</span>
+            <strong>الأصدقاء</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Toast -->
+
+<div
+    class="settings-toast"
+    id="settingsToast"
+    role="status"
+    aria-live="polite"
+></div>
+
+
+<!-- Footer -->
+
+<footer class="page-footer">
+
+    <span>
+        DeenTrack
+    </span>
+
+    <span>
+        •
+    </span>
+
+    <span>
+        نظّم يومك • طوّر نفسك
+    </span>
+
+</footer>
+
+
+<!-- JavaScript -->
+
+<script src="settings.js"></script>
+<script src="user.js"></script>
+</body>
+</html>

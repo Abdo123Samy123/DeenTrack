@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>DeenTrack | الجدول</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="variables.css">
+<link rel="stylesheet" href="global.css">
+<link rel="stylesheet" href="dashboard.css">
+<link rel="stylesheet" href="schedule.css">
+    <!-- Schedule CSS -->
+    <link rel="stylesheet" href="schedule.css">
+
+</head>
+
+
+<body>
+
+<div class="app-container">
+
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                <span>☪</span>
+            </div>
+
+            <div>
+                <h2>DeenTrack</h2>
+                <small>طوّر يومك</small>
+            </div>
+
+        </div>
+
+
+        <!-- USER -->
+
+        <div class="user-mini-card">
+
+            <div class="user-avatar">
+                A
+            </div>
+
+            <div class="user-mini-info">
+
+                <strong>Abdo</strong>
+
+                <span>
+                    عضو نشيط
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="sidebar-nav">
+
+            <a
+                href="index.html"
+                class="nav-item"
+            >
+                <span>⌂</span>
+                <label>الرئيسية</label>
+            </a>
+
+
+            <a
+                href="prayer.html"
+                class="nav-item"
+            >
+                <span>🕌</span>
+                <label>الصلوات</label>
+            </a>
+
+
+            <a
+                href="dhikr.html"
+                class="nav-item"
+            >
+                <span>📿</span>
+                <label>الاستغفار</label>
+            </a>
+
+
+            <a
+                href="study.html"
+                class="nav-item"
+            >
+                <span>📚</span>
+                <label>المذاكرة</label>
+            </a>
+
+
+            <a
+                href="schedule.html"
+                class="nav-item active"
+            >
+                <span>📅</span>
+                <label>الجدول</label>
+            </a>
+
+
+            <a
+                href="tasks.html"
+                class="nav-item"
+            >
+                <span>✓</span>
+                <label>المهام</label>
+            </a>
+
+
+            <a
+                href="friends.html"
+                class="nav-item"
+            >
+                <span>👥</span>
+                <label>الأصدقاء</label>
+            </a>
+
+
+            <a
+                href="challenges.html"
+                class="nav-item"
+            >
+                <span>🏆</span>
+                <label>التحديات</label>
+            </a>
+
+
+            <a
+                href="messages.html"
+                class="nav-item"
+            >
+                <span>💬</span>
+                <label>المحادثات</label>
+            </a>
+
+
+            <a
+                href="statistics.html"
+                class="nav-item"
+            >
+                <span>📊</span>
+                <label>الإحصائيات</label>
+            </a>
+
+
+            <a
+                href="profile.html"
+                class="nav-item"
+            >
+                <span>👤</span>
+                <label>الملف الشخصي</label>
+            </a>
+
+
+            <a
+                href="settings.html"
+                class="nav-item"
+            >
+                <span>⚙</span>
+                <label>الإعدادات</label>
+            </a>
+
+        </nav>
+
+
+        <!-- FOOTER -->
+
+        <div class="sidebar-footer">
+
+            <span>
+                DeenTrack
+            </span>
+
+            <small>
+                Build your better day
+            </small>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="main-content">
+
+
+        <!-- HEADER -->
+
+        <header class="top-header">
+
+            <div class="header-title">
+
+                <span class="page-icon">
+                    📅
+                </span>
+
+                <div>
+
+                    <h1>
+                        الجدول الدراسي
+                    </h1>
+
+                    <p>
+                        نظّم يومك واعرف إيه اللي عليك
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="add-schedule-btn"
+                id="openScheduleModal"
+            >
+                ＋ إضافة درس
+            </button>
+
+        </header>
+
+
+
+        <!-- =========================
+             WEEK NAVIGATION
+        ========================== -->
+
+        <section class="schedule-week-card">
+
+            <div class="week-header">
+
+                <button
+                    type="button"
+                    id="previousWeek"
+                    class="week-button"
+                >
+                    ‹
+                </button>
+
+
+                <div class="week-title">
+
+                    <span>
+                        📆
+                    </span>
+
+                    <strong id="weekTitle">
+                        هذا الأسبوع
+                    </strong>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    id="nextWeek"
+                    class="week-button"
+                >
+                    ›
+                </button>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="todayButton"
+                class="today-button"
+            >
+                اليوم
+            </button>
+
+        </section>
+
+
+
+        <!-- =========================
+             WEEK DAYS
+        ========================== -->
+
+        <section class="days-grid" id="daysGrid">
+
+            <!-- JavaScript will create days -->
+
+        </section>
+
+
+
+        <!-- =========================
+             TODAY SUMMARY
+        ========================== -->
+
+        <section class="schedule-summary">
+
+            <div class="summary-card">
+
+                <span class="summary-icon">
+                    📚
+                </span>
+
+                <div>
+
+                    <span>
+                        دروس اليوم
+                    </span>
+
+                    <strong id="todayLessons">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <span class="summary-icon">
+                    ⏰
+                </span>
+
+                <div>
+
+                    <span>
+                        إجمالي الساعات
+                    </span>
+
+                    <strong id="todayHours">
+                        0 ساعة
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <span class="summary-icon">
+                    ✅
+                </span>
+
+                <div>
+
+                    <span>
+                        مكتمل
+                    </span>
+
+                    <strong id="completedLessons">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <span class="summary-icon">
+                    📝
+                </span>
+
+                <div>
+
+                    <span>
+                        الواجبات
+                    </span>
+
+                    <strong id="homeworkCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             LESSONS
+        ========================== -->
+
+        <section class="lessons-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span>
+                        📖
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            دروس اليوم
+                        </h2>
+
+                        <p>
+                            كل الحصص والمواعيد بتاعتك
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <span
+                    class="selected-date"
+                    id="selectedDate"
+                >
+                    اليوم
+                </span>
+
+            </div>
+
+
+            <div
+                class="lessons-list"
+                id="lessonsList"
+            >
+
+                <div class="empty-lessons">
+
+                    <span>
+                        📚
+                    </span>
+
+                    <strong>
+                        مفيش دروس النهارده
+                    </strong>
+
+                    <p>
+                        أضف أول درس للجدول.
+                    </p>
+
+                    <button
+                        type="button"
+                        id="emptyAddLesson"
+                    >
+                        ＋ إضافة درس
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             WEEK OVERVIEW
+        ========================== -->
+
+        <section class="week-overview">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span>
+                        📊
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            نظرة على الأسبوع
+                        </h2>
+
+                        <p>
+                            توزيع الدروس خلال الأسبوع
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="week-overview-grid"
+                id="weekOverviewGrid"
+            >
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             MODAL
+        ========================== -->
+
+        <div
+            class="schedule-modal"
+            id="scheduleModal"
+        >
+
+            <div class="modal-overlay" id="modalOverlay"></div>
+
+
+            <div class="schedule-modal-box">
+
+                <div class="modal-header">
+
+                    <div>
+
+                        <span>
+                            📚
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                إضافة درس جديد
+                            </h2>
+
+                            <p>
+                                ضيف تفاصيل الدرس في جدولك
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="closeScheduleModal"
+                        class="close-modal"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+
+
+                <!-- FORM -->
+
+                <form id="scheduleForm">
+
+
+                    <!-- LESSON NAME -->
+
+                    <div class="form-group">
+
+                        <label for="lessonName">
+                            اسم الدرس
+                        </label>
+
+                        <input
+                            type="text"
+                            id="lessonName"
+                            placeholder="مثال: درس الجبر"
+                            maxlength="60"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- SUBJECT -->
+
+                    <div class="form-group">
+
+                        <label for="lessonSubject">
+                            المادة
+                        </label>
+
+                        <input
+                            type="text"
+                            id="lessonSubject"
+                            placeholder="مثال: الرياضيات"
+                            maxlength="40"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- DATE -->
+
+                    <div class="form-group">
+
+                        <label for="lessonDate">
+                            التاريخ
+                        </label>
+
+                        <input
+                            type="date"
+                            id="lessonDate"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- TIMES -->
+
+                    <div class="form-row">
+
+    <div class="form-group">
+
+        <label for="lessonStart">
+            يبدأ
+        </label>
+
+        <input
+            type="text"
+            id="lessonStart"
+            placeholder="مثال: 5 أو 05:00"
+            inputmode="numeric"
+            autocomplete="off"
+            required
+        >
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="lessonEnd">
+            ينتهي
+        </label>
+
+        <input
+            type="text"
+            id="lessonEnd"
+            placeholder="مثال: 6 أو 06:00"
+            inputmode="numeric"
+            autocomplete="off"
+            required
+        >
+
+    </div>
+
+</div>
+
+                    <!-- TEACHER -->
+
+                    <div class="form-group">
+
+                        <label for="teacherName">
+                            المدرس
+                            <span>
+                                اختياري
+                            </span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="teacherName"
+                            placeholder="اسم المدرس"
+                            maxlength="50"
+                        >
+
+                    </div>
+
+
+
+                    <!-- LOCATION -->
+
+                    <div class="form-group">
+
+                        <label for="lessonLocation">
+                            المكان
+                            <span>
+                                اختياري
+                            </span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="lessonLocation"
+                            placeholder="مثال: السنتر / أونلاين"
+                            maxlength="60"
+                        >
+
+                    </div>
+
+
+
+                    <!-- HOMEWORK -->
+
+                    <div class="form-group">
+
+                        <label for="lessonHomework">
+                            الواجب
+                            <span>
+                                اختياري
+                            </span>
+                        </label>
+
+                        <textarea
+                            id="lessonHomework"
+                            rows="3"
+                            maxlength="300"
+                            placeholder="اكتب الواجب المطلوب..."
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <!-- REMINDER -->
+
+                    <label class="reminder-toggle">
+
+                        <input
+                            type="checkbox"
+                            id="lessonReminder"
+                            checked
+                        >
+
+                        <span class="custom-check"></span>
+
+                        <div>
+
+                            <strong>
+                                تذكير بالدرس
+                            </strong>
+
+                            <small>
+                                يظهر لك تنبيه قبل موعد الدرس
+                            </small>
+
+                        </div>
+
+                    </label>
+
+
+
+                    <!-- BUTTONS -->
+
+                    <div class="modal-actions">
+
+                        <button
+                            type="button"
+                            class="cancel-button"
+                            id="cancelSchedule"
+                        >
+                            إلغاء
+                        </button>
+
+
+                        <button
+                            type="submit"
+                            class="save-button"
+                        >
+                            ✓ حفظ الدرس
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             FOOTER
+        ========================== -->
+
+        <footer class="page-footer">
+
+            <p>
+                © 2026 DeenTrack — طوّر يومك خطوة بخطوة
+            </p>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+
+<!-- TOAST -->
+
+<div
+    class="toast-container"
+    id="toastContainer"
+></div>
+
+
+
+<!-- SCHEDULE JS -->
+
+<script src="schedule.js"></script>
+
+</body>
+
+</html>

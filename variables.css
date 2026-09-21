@@ -1,0 +1,65 @@
+:root {
+
+    /* Main Colors */
+
+    --bg-primary: #050b14;
+    --bg-secondary: #08111f;
+    --bg-tertiary: #0c1727;
+
+    --surface: rgba(13, 25, 42, 0.72);
+    --surface-light: rgba(255, 255, 255, 0.045);
+    --surface-hover: rgba(255, 255, 255, 0.075);
+
+    --border: rgba(255, 255, 255, 0.08);
+    --border-light: rgba(255, 255, 255, 0.13);
+
+    /* Accent */
+
+    --accent: #63e6be;
+    --accent-dark: #38b991;
+    --accent-soft: rgba(99, 230, 190, 0.12);
+    --accent-glow: rgba(99, 230, 190, 0.28);
+
+    /* Secondary */
+
+    --purple: #a78bfa;
+    --blue: #60a5fa;
+    --gold: #fbbf24;
+    --orange: #fb923c;
+    --red: #fb7185;
+
+    /* Text */
+
+    --text-primary: #f5f7fa;
+    --text-secondary: #aab6c5;
+    --text-muted: #6f7d8f;
+
+    /* Shadows */
+
+    --shadow-small:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+
+    --shadow-medium:
+        0 18px 50px rgba(0, 0, 0, 0.28);
+
+    --shadow-glow:
+        0 0 35px var(--accent-glow);
+
+    /* Radius */
+
+    --radius-small: 12px;
+    --radius-medium: 18px;
+    --radius-large: 26px;
+    --radius-xl: 34px;
+
+    /* Layout */
+
+    --sidebar-width: 270px;
+
+    /* Transitions */
+
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.35s ease;
+    --transition-slow: 0.6s ease;
+
+}

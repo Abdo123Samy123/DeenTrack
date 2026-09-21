@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>DeenTrack | المهام والواجبات</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="tasks.css">
+
+</head>
+
+
+<body>
+
+<div class="app-layout">
+
+
+    <!-- =========================
+         SIDEBAR
+    ========================= -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="brand-icon">
+                ☪
+            </div>
+
+            <div>
+                <h2>DeenTrack</h2>
+                <span>طوّر يومك</span>
+            </div>
+
+        </div>
+
+
+        <div class="user-mini-card">
+
+            <div class="user-avatar">
+                ع
+            </div>
+
+            <div>
+
+                <strong>abdo</strong>
+
+                <span>
+                    مستخدم DeenTrack
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a
+                href="index.html"
+                class="nav-item">
+
+                <span>🏠</span>
+                <span>الرئيسية</span>
+
+            </a>
+
+
+            <a
+                href="prayer.html"
+                class="nav-item">
+
+                <span>🕌</span>
+                <span>الصلوات</span>
+
+            </a>
+
+
+            <a
+                href="dhikr.html"
+                class="nav-item">
+
+                <span>🤍</span>
+                <span>الذكر</span>
+
+            </a>
+
+
+            <a
+                href="study.html"
+                class="nav-item">
+
+                <span>📚</span>
+                <span>المذاكرة</span>
+
+            </a>
+
+
+            <a
+                href="schedule.html"
+                class="nav-item">
+
+                <span>📅</span>
+                <span>الجدول</span>
+
+            </a>
+
+
+            <a
+                href="tasks.html"
+                class="nav-item active">
+
+                <span>✅</span>
+                <span>المهام والواجبات</span>
+
+            </a>
+
+
+            <a
+                href="friends.html"
+                class="nav-item">
+
+                <span>👥</span>
+                <span>الأصدقاء</span>
+
+            </a>
+
+
+            <a
+                href="challenges.html"
+                class="nav-item">
+
+                <span>🏆</span>
+                <span>التحديات</span>
+
+            </a>
+
+
+            <a
+                href="messages.html"
+                class="nav-item">
+
+                <span>💬</span>
+                <span>المحادثات</span>
+
+            </a>
+
+
+            <a
+                href="statistics.html"
+                class="nav-item">
+
+                <span>📊</span>
+                <span>الإحصائيات</span>
+
+            </a>
+
+
+            <a
+                href="profile.html"
+                class="nav-item">
+
+                <span>👤</span>
+                <span>الملف الشخصي</span>
+
+            </a>
+
+
+            <a
+                href="settings.html"
+                class="nav-item">
+
+                <span>⚙️</span>
+                <span>الإعدادات</span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="streak-mini">
+
+                <span>🔥</span>
+
+                <div>
+
+                    <strong id="sidebarStreak">
+                        7
+                    </strong>
+
+                    <small>
+                        يوم متواصل
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================
+         MAIN
+    ========================= -->
+
+    <main class="main-content">
+
+
+        <!-- MOBILE HEADER -->
+
+        <header class="mobile-header">
+
+            <button
+                id="mobileMenuBtn"
+                class="mobile-menu-btn">
+
+                ☰
+
+            </button>
+
+            <strong>
+                DeenTrack
+            </strong>
+
+        </header>
+
+
+        <!-- =========================
+             PAGE HEADER
+        ========================= -->
+
+        <section class="tasks-header">
+
+            <div>
+
+                <span class="tasks-kicker">
+                    DAILY PRODUCTIVITY
+                </span>
+
+                <h1>
+                    المهام والواجبات
+                </h1>
+
+                <p>
+                    نظم مذاكرتك، خلّص واجباتك،
+                    وخلي يومك ماشي بنظام.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="addTaskBtn"
+                class="add-task-btn">
+
+                <span>＋</span>
+
+                إضافة مهمة
+
+            </button>
+
+        </section>
+
+
+        <!-- =========================
+             STATS
+        ========================= -->
+
+        <section class="tasks-stats">
+
+            <div class="task-stat-card">
+
+                <div class="task-stat-icon">
+                    📋
+                </div>
+
+                <div>
+
+                    <span>
+                        إجمالي المهام
+                    </span>
+
+                    <strong id="totalTaskCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="task-stat-card">
+
+                <div class="task-stat-icon completed-icon">
+                    ✅
+                </div>
+
+                <div>
+
+                    <span>
+                        مكتملة
+                    </span>
+
+                    <strong id="completedTaskCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="task-stat-card">
+
+                <div class="task-stat-icon pending-icon">
+                    ⏳
+                </div>
+
+                <div>
+
+                    <span>
+                        متبقية
+                    </span>
+
+                    <strong id="pendingTaskCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="task-stat-card">
+
+                <div class="task-stat-icon points-icon">
+                    ⭐
+                </div>
+
+                <div>
+
+                    <span>
+                        نقاط اليوم
+                    </span>
+
+                    <strong id="taskPointsCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROGRESS
+        ========================= -->
+
+        <section class="tasks-progress-card">
+
+            <div class="progress-top">
+
+                <div>
+
+                    <span>
+                        إنجاز المهام
+                    </span>
+
+                    <strong id="taskProgressText">
+                        0%
+                    </strong>
+
+                </div>
+
+                <span id="taskProgressMessage">
+                    ابدأ بأول مهمة النهارده 🚀
+                </span>
+
+            </div>
+
+
+            <div class="task-progress-track">
+
+                <div
+                    id="taskProgressFill"
+                    class="task-progress-fill">
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FILTERS
+        ========================= -->
+
+        <section class="tasks-toolbar">
+
+            <div class="task-filters">
+
+                <button
+                    type="button"
+                    class="filter-btn active"
+                    data-filter="all">
+
+                    الكل
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="pending">
+
+                    قيد التنفيذ
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="filter-btn"
+                    data-filter="completed">
+
+                    مكتملة
+
+                </button>
+
+            </div>
+
+
+            <div class="task-date">
+
+                📅
+
+                <span id="todayDate">
+                    اليوم
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TASK LIST
+        ========================= -->
+
+        <section class="tasks-section">
+
+            <div
+                id="tasksList"
+                class="tasks-list">
+
+                <!-- JS -->
+
+            </div>
+
+
+            <div
+                id="emptyTasks"
+                class="empty-tasks">
+
+                <div class="empty-task-icon">
+                    📝
+                </div>
+
+                <h3>
+                    مفيش مهام هنا
+                </h3>
+
+                <p>
+                    أضف أول مهمة وابدأ يومك بشكل منظم.
+                </p>
+
+                <button
+                    type="button"
+                    id="emptyAddTask">
+
+                    ＋ إضافة مهمة
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MOTIVATION
+        ========================= -->
+
+        <section class="task-motivation">
+
+            <div class="motivation-glow"></div>
+
+            <div class="motivation-icon">
+                🚀
+            </div>
+
+            <div>
+
+                <span>
+                    نصيحة اليوم
+                </span>
+
+                <h2 id="motivationTitle">
+                    مهمة واحدة في كل مرة
+                </h2>
+
+                <p id="motivationText">
+                    متبصش لكل اللي وراك مرة واحدة.
+                    خلّص خطوة، وبعدها اللي بعدها.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MODAL
+        ========================= -->
+
+        <div
+            class="task-modal"
+            id="taskModal">
+
+            <div
+                class="task-modal-overlay"
+                id="taskModalOverlay">
+            </div>
+
+
+            <div class="task-modal-box">
+
+                <div class="task-modal-header">
+
+                    <div>
+
+                        <span>📝</span>
+
+                        <div>
+
+                            <h2>
+                                إضافة مهمة جديدة
+                            </h2>
+
+                            <p>
+                                اكتب تفاصيل المهمة بتاعتك
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="closeTaskModal"
+                        class="close-task-modal">
+
+                        ×
+
+                    </button>
+
+                </div>
+
+
+                <form id="taskForm">
+
+                    <div class="form-group">
+
+                        <label for="taskTitle">
+                            اسم المهمة
+                        </label>
+
+                        <input
+                            type="text"
+                            id="taskTitle"
+                            maxlength="80"
+                            placeholder="مثال: حل واجب الرياضيات"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="taskSubject">
+                            المادة
+                            <span>اختياري</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="taskSubject"
+                            maxlength="40"
+                            placeholder="مثال: الرياضيات">
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="taskDate">
+                                التاريخ
+                            </label>
+
+                            <input
+                                type="date"
+                                id="taskDate"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="taskPriority">
+                                الأولوية
+                            </label>
+
+                            <select id="taskPriority">
+
+                                <option value="normal">
+                                    عادية
+                                </option>
+
+                                <option value="high">
+                                    مهمة
+                                </option>
+
+                                <option value="urgent">
+                                    عاجلة
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="taskDescription">
+                            تفاصيل
+                            <span>اختياري</span>
+                        </label>
+
+                        <textarea
+                            id="taskDescription"
+                            rows="4"
+                            maxlength="300"
+                            placeholder="اكتب أي تفاصيل أو ملاحظات...">
+                        </textarea>
+
+                    </div>
+
+
+                    <div class="modal-actions">
+
+                        <button
+                            type="button"
+                            id="cancelTask"
+                            class="cancel-task">
+
+                            إلغاء
+
+                        </button>
+
+
+                        <button
+                            type="submit"
+                            class="save-task">
+
+                            ✓ حفظ المهمة
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <footer class="page-footer">
+
+            <p>
+                © 2026 DeenTrack — طوّر يومك خطوة بخطوة
+            </p>
+
+        </footer>
+
+
+    </main>
+
+</div>
+
+
+<!-- TOAST -->
+
+<div
+    class="toast-container"
+    id="toastContainer">
+</div>
+
+
+<script src="tasks.js"></script>
+<script src="user.js"></script>
+
+</body>
+
+</html>

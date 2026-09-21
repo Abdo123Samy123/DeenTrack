@@ -1,0 +1,854 @@
+/* =========================================================
+   DEENTRACK WELCOME SCREEN
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #050712;
+    --card: rgba(12, 17, 32, 0.78);
+
+    --primary: #8b5cf6;
+    --primary-light: #a78bfa;
+    --secondary: #22d3ee;
+
+    --text: #f8fafc;
+    --muted: #94a3b8;
+
+    --border: rgba(139, 92, 246, 0.22);
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+
+    font-family:
+        "Cairo",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color: var(--text);
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(124, 58, 237, 0.18),
+            transparent 38%
+        ),
+        radial-gradient(
+            circle at 100% 100%,
+            rgba(34, 211, 238, 0.10),
+            transparent 35%
+        ),
+        var(--bg);
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.background {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+
+/* Grid */
+
+.grid {
+    position: absolute;
+    inset: -100px;
+
+    opacity: 0.14;
+
+    background-image:
+        linear-gradient(
+            rgba(139, 92, 246, 0.14) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(139, 92, 246, 0.14) 1px,
+            transparent 1px
+        );
+
+    background-size: 55px 55px;
+
+    transform:
+        perspective(600px)
+        rotateX(60deg)
+        translateY(150px);
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            transparent,
+            black 35%,
+            transparent 100%
+        );
+}
+
+
+/* Glow */
+
+.glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    animation: floatingGlow 8s ease-in-out infinite;
+}
+
+.glow-1 {
+    width: 350px;
+    height: 350px;
+
+    top: -130px;
+    right: -100px;
+
+    background: rgba(139, 92, 246, 0.18);
+}
+
+.glow-2 {
+    width: 280px;
+    height: 280px;
+
+    bottom: -100px;
+    left: -80px;
+
+    background: rgba(34, 211, 238, 0.12);
+
+    animation-delay: -3s;
+}
+
+.glow-3 {
+    width: 180px;
+    height: 180px;
+
+    top: 40%;
+    left: 50%;
+
+    background: rgba(167, 139, 250, 0.07);
+
+    animation-delay: -5s;
+}
+
+@keyframes floatingGlow {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(25px, -20px) scale(1.08);
+    }
+}
+
+
+/* =========================================================
+   PARTICLES
+========================================================= */
+
+.particles span {
+    position: absolute;
+
+    width: 3px;
+    height: 3px;
+
+    border-radius: 50%;
+
+    background: #c4b5fd;
+
+    box-shadow:
+        0 0 10px #8b5cf6,
+        0 0 20px rgba(139, 92, 246, 0.5);
+
+    animation: particleFloat 7s linear infinite;
+}
+
+.particles span:nth-child(1) {
+    top: 15%;
+    left: 15%;
+}
+
+.particles span:nth-child(2) {
+    top: 25%;
+    left: 80%;
+    animation-delay: -2s;
+}
+
+.particles span:nth-child(3) {
+    top: 70%;
+    left: 12%;
+    animation-delay: -4s;
+}
+
+.particles span:nth-child(4) {
+    top: 80%;
+    left: 82%;
+    animation-delay: -1s;
+}
+
+.particles span:nth-child(5) {
+    top: 45%;
+    left: 7%;
+    animation-delay: -5s;
+}
+
+.particles span:nth-child(6) {
+    top: 55%;
+    left: 92%;
+    animation-delay: -3s;
+}
+
+.particles span:nth-child(7) {
+    top: 10%;
+    left: 50%;
+    animation-delay: -6s;
+}
+
+.particles span:nth-child(8) {
+    top: 90%;
+    left: 50%;
+    animation-delay: -2.5s;
+}
+
+@keyframes particleFloat {
+
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.welcome-container {
+    position: relative;
+    z-index: 5;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.welcome-card {
+    position: relative;
+
+    width: min(480px, 100%);
+
+    padding: 42px 42px 30px;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(20, 25, 45, 0.90),
+            rgba(7, 10, 22, 0.82)
+        );
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.55),
+        0 0 60px rgba(139, 92, 246, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(25px);
+
+    overflow: hidden;
+
+    animation: cardAppear 0.8s cubic-bezier(.2,.8,.2,1);
+}
+
+.welcome-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 12%;
+    right: 12%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(167, 139, 250, 0.8),
+            transparent
+        );
+
+    box-shadow:
+        0 0 20px rgba(139, 92, 246, 0.7);
+}
+
+.welcome-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -100px;
+    right: -90px;
+
+    border-radius: 50%;
+
+    background: rgba(139, 92, 246, 0.10);
+
+    filter: blur(40px);
+}
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(30px)
+            scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo-area {
+    text-align: center;
+}
+
+.logo-icon {
+    width: 72px;
+    height: 72px;
+
+    margin: 0 auto 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(139, 92, 246, 0.25),
+            rgba(34, 211, 238, 0.08)
+        );
+
+    border: 1px solid rgba(167, 139, 250, 0.25);
+
+    box-shadow:
+        0 0 35px rgba(139, 92, 246, 0.15),
+        inset 0 0 25px rgba(139, 92, 246, 0.05);
+
+    animation: logoFloat 4s ease-in-out infinite;
+}
+
+.logo-icon span {
+    font-size: 34px;
+
+    color: #c4b5fd;
+
+    filter:
+        drop-shadow(0 0 10px rgba(139, 92, 246, 0.8));
+}
+
+@keyframes logoFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.logo-area h1 {
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo-area h1 span {
+    color: var(--primary-light);
+}
+
+.logo-line {
+    width: 55px;
+    height: 2px;
+
+    margin: 13px auto;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--secondary),
+            var(--primary)
+        );
+
+    box-shadow:
+        0 0 15px rgba(139, 92, 246, 0.7);
+}
+
+.subtitle {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   WELCOME TEXT
+========================================================= */
+
+.welcome-text {
+    margin-top: 34px;
+}
+
+.small-title {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    color: #c4b5fd;
+
+    background: rgba(139, 92, 246, 0.08);
+
+    border: 1px solid rgba(139, 92, 246, 0.14);
+}
+
+.welcome-text h2 {
+    margin-top: 14px;
+
+    font-size: 27px;
+    line-height: 1.4;
+}
+
+.welcome-text h2 strong {
+    color: var(--primary-light);
+
+    text-shadow:
+        0 0 20px rgba(139, 92, 246, 0.35);
+}
+
+.welcome-text p {
+    margin-top: 7px;
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.input-area {
+    margin-top: 27px;
+}
+
+.input-area label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    color: #cbd5e1;
+}
+
+.input-box {
+    position: relative;
+
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 17px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid rgba(148, 163, 184, 0.14);
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.input-box:focus-within {
+    border-color: rgba(139, 92, 246, 0.65);
+
+    background: rgba(139, 92, 246, 0.045);
+
+    box-shadow:
+        0 0 0 4px rgba(139, 92, 246, 0.08),
+        0 0 30px rgba(139, 92, 246, 0.10);
+}
+
+.input-icon {
+    width: 55px;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    opacity: 0.8;
+}
+
+.input-box input {
+    flex: 1;
+
+    min-width: 0;
+
+    height: 100%;
+
+    border: 0;
+    outline: 0;
+
+    background: transparent;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 15px;
+}
+
+.input-box input::placeholder {
+    color: #64748b;
+}
+
+.input-status {
+    padding-left: 17px;
+    padding-right: 10px;
+
+    color: #8b5cf6;
+
+    opacity: 0.7;
+}
+
+.input-area small {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.enter-button {
+    position: relative;
+
+    width: 100%;
+    height: 59px;
+
+    margin-top: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+
+    border: 0;
+    border-radius: 17px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    color: white;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 800;
+
+    background:
+        linear-gradient(
+            110deg,
+            #6d28d9,
+            #8b5cf6,
+            #6d28d9
+        );
+
+    background-size: 200% 100%;
+
+    box-shadow:
+        0 12px 30px rgba(109, 40, 217, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.16);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.enter-button:hover {
+    transform: translateY(-2px);
+
+    background-position: 100% 0;
+
+    box-shadow:
+        0 17px 38px rgba(109, 40, 217, 0.35),
+        0 0 25px rgba(139, 92, 246, 0.16);
+}
+
+.enter-button:active {
+    transform: translateY(1px) scale(0.99);
+}
+
+.button-icon {
+    font-size: 20px;
+
+    transition: transform 0.25s ease;
+}
+
+.enter-button:hover .button-icon {
+    transform: translateX(-5px);
+}
+
+.button-shine {
+    position: absolute;
+
+    top: -100%;
+    left: -30%;
+
+    width: 40%;
+    height: 300%;
+
+    background: rgba(255, 255, 255, 0.14);
+
+    transform: rotate(25deg);
+
+    transition: left 0.6s ease;
+}
+
+.enter-button:hover .button-shine {
+    left: 110%;
+}
+
+
+/* =========================================================
+   SECURITY
+========================================================= */
+
+.security-note {
+    margin-top: 18px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    color: #64748b;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    margin-top: 18px;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: #475569;
+
+    font-size: 10px;
+}
+
+footer b {
+    color: #7c3aed;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.input-error .input-box {
+    border-color: rgba(248, 113, 113, 0.7);
+
+    box-shadow:
+        0 0 0 4px rgba(248, 113, 113, 0.06);
+}
+
+.input-error small {
+    color: #f87171;
+}
+
+
+/* =========================================================
+   SUCCESS EXIT
+========================================================= */
+
+.page-exit {
+    animation: pageExit 0.65s ease forwards;
+}
+
+@keyframes pageExit {
+
+    to {
+        opacity: 0;
+        transform: scale(1.04);
+        filter: blur(8px);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        overflow: auto;
+    }
+
+    .welcome-container {
+        min-height: 100svh;
+
+        padding:
+            18px
+            14px;
+    }
+
+    .welcome-card {
+        padding: 32px 23px 25px;
+
+        border-radius: 24px;
+    }
+
+    .logo-icon {
+        width: 65px;
+        height: 65px;
+    }
+
+    .logo-area h1 {
+        font-size: 30px;
+    }
+
+    .welcome-text {
+        margin-top: 27px;
+    }
+
+    .welcome-text h2 {
+        font-size: 24px;
+    }
+
+    .input-box {
+        height: 55px;
+    }
+
+    .enter-button {
+        height: 56px;
+    }
+
+    footer {
+        margin-bottom: 8px;
+    }
+}
+
+
+@media (max-height: 700px) and (min-width: 601px) {
+
+    .welcome-container {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .welcome-card {
+        padding-top: 27px;
+        padding-bottom: 22px;
+    }
+
+    .welcome-text {
+        margin-top: 20px;
+    }
+
+    .input-area {
+        margin-top: 18px;
+    }
+
+    .enter-button {
+        margin-top: 15px;
+    }
+}
